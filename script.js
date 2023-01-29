@@ -52,6 +52,13 @@ class Board {
     }
 }
 
+class Ai{
+    constructor(){
+        this.player = 2
+
+    }
+}
+
 class Game {
     constructor() {
         this.board = new Board();
@@ -85,18 +92,43 @@ class Game {
     }
 
     displayMessage(num){
+        const body = document.querySelector('body')
+        const message = document.createElement('div')
+        const messageContainer = document.createElement('section')
+        messageContainer.classList.add('messageContainer')
+        message.classList.add('message')
+        
+        
         if(num === 0){
             console.log('draw')
+            message.innerText = 'Draw'
         }else if (num ===1){
-            console.log('x won')
+            message.innerText = 'X Won'
+            console.log('draw')
+
         }else if (num ===2){
-            console.log('o won')
+            console.log('draw')
+            message.innerText = 'O Won'
         }
+
+        const playAgain = document.createElement('button')
+        playAgain.classList.add('play-again')
+        playAgain.innerText = "Play Again"
+        
+        message.appendChild(playAgain)
+        messageContainer.appendChild(message)
+        
+        body.appendChild(messageContainer)
+        
+
+
     }
     reset(){
-        this.board = new Board();
-        this.player = 1;
-        this.gameMode = "pvp";
+        // this.board = new Board();
+        // this.player = 1;
+        // this.gameMode = "pvp";
+
+        location.reload()
 }
 }
 
@@ -126,7 +158,10 @@ function main() {
 
             if (game.isOver()) {
                 game.displayMessage(board.boardState())
-                game.reset()
+                const btnAgain = document.querySelector('.play-again')
+                btnAgain.addEventListener('click',()=>{
+                    game.reset()
+                })
             } 
             
         });
