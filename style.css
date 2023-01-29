@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body{
     width: 100vw;
     height: 100vh;
@@ -35,3 +37,18 @@ button{
     border-bottom: solid black 4px ;
 }
 
+@media screen and (max-width:700px) {
+   
+    button{
+        
+        width: 100px;
+        height: 100px;
+         
+    }
+
+    img{
+        width: 100px;
+        height: 100px;
+    }
+
+}
