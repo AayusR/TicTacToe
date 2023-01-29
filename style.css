@@ -9,12 +9,9 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: skyblue;
+    background-color: #89CFF0;
 }
 
-.main-body{
-    
-}
 
 .btn-container{
     height: 650px;
@@ -24,11 +21,11 @@ body{
     grid-template-columns:auto auto auto;
 }
 
-button{
+.square{
     border: none;
     width: 200px;
     height: 200px;
-    background-color: blue;  
+    background-color: #89CFF0;  
 }
 
 .right{
@@ -38,9 +35,59 @@ button{
     border-bottom: solid black 4px ;
 }
 
+.messageContainer{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.messageContainer> .message{
+   width: 520px;
+   height: 132px;
+    position: relative;
+    top: 60vh;
+
+    color:white;
+    font-size: 5rem;
+    background-color:  rgb(63, 147, 147);
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    
+}
+
+.play-again{
+    margin-left: 20px;
+    padding: 2px;
+    font-size: 3rem;
+    background-color: rgb(63, 147, 147);
+    color: white;
+    border: white 2px solid;
+    border-radius: 6px;
+}
+
+.play-again:hover{
+    cursor: pointer;
+}
+
+.play-again:active{
+    
+    background-color:white ;
+    color: rgb(63, 147, 147);
+    border: white 2px solid;
+}
+
 @media screen and (max-width:700px) {
    
-    button{
+    .square{
         
         width: 100px;
         height: 100px;
@@ -52,4 +99,13 @@ button{
         height: 100px;
     }
 
+    .messageContainer> .message{
+        font-size: 3rem;
+        width: 320px;
+        height: 80px;
+        padding: 0;
+    }
+    .play-again{
+        font-size: 1.5rem;   
+    }
 }
