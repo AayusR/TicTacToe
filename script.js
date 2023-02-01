@@ -79,7 +79,7 @@ class Board {
 
 class Ai {
     constructor() {
-        this.player = 1;
+        this.player = 2;
         this.level = 0;
     }
 
@@ -95,7 +95,7 @@ class Ai {
             move = this.rand(board);
         }
 
-        
+
         return move;
     }
 }
