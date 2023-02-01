@@ -95,6 +95,7 @@ class Ai {
             move = this.rand(board);
         }
 
+        
         return move;
     }
 }
